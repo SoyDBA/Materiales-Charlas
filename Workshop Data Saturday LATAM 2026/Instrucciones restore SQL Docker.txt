@@ -1,0 +1,12 @@
+Listar contenedores
+	docker ps
+
+Copiar el ID de contenedor
+
+Crea la carpeta de backups dentro del contenedor
+	docker exec -it <ContenedorID> /bin/bash -lc "mkdir -p /var/opt/mssql/backup"
+
+Copia el archivo .bak desde tu PC al contenedor
+	docker cp "<RutaArchivo>" <ContenedorID>:/var/opt/mssql/backup/
+
+
